@@ -1,0 +1,29 @@
+
+1.Using find() function
+The standard solution to check for existence of an element in the set container (std::set or std::unordered_set) is to use its member function find(). 
+If the specified element is found, an iterator to the element is returned; otherwise, an iterator to the end of the container is returned.
+    if (s.find(key) != s.end()) {
+        std::cout << "Element is present in the set" << std::endl;
+    }
+
+
+2. Using count() function
+Another good alternative is to use the count() function of the set container. It returns value 1 if 
+the element is found in the set container, otherwise 0 is returned.
+    if (s.count(key)) {
+        std::cout << "Element is present in the set" << std::endl;
+    }
+
+        
+3.set::erase()
+erase() function is used to remove elements from a container from the specified position or range.
+    // defining iterator pointing
+    // to the first element
+    it = myset.begin();
+ 
+    // erasing the first element
+    myset.erase(it);
+
+// Erase the element that is equal to
+// the value passed as the parameter
+myset.erase(valueOfElementToBeDeleted);

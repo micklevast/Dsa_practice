@@ -22,7 +22,7 @@ void graph_traversal()
 int main()
 {
     int visited_arr[4] = {0};
-    int x=3; //ele visited
+    int x=1; //ele visited
     q.push(x);  //put in queue for exploring
     
     cout << x << " ";

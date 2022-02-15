@@ -1,0 +1,12 @@
+Priority Queue is special stl Library which impliment max-heap and min-heap.
+
+What are priority queues in C++?
+A priority queue in c++ is a type of container adapter, which processes only the highest priority element, i.e.
+the first element will be the maximum of all elements in the queue, and elements are in decreasing order
+
+How to implement min-heap using C++ STL?
+A min-heap is a binary tree such that:
+1. The data contained in each node is less than (or equal to) the data in that node’s children.
+2. The binary tree is complete
+
+The C++ Standard Library consists of a container named priority_queue. A priority queue is technically a max-heap but it can be used to implement a min-heap by tweaking its constructor.

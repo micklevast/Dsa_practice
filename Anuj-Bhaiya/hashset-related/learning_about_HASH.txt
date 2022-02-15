@@ -1,0 +1,100 @@
+https://www.c-sharpcorner.com/article/theory-of-hashing-and-hash-tables/
+
+**Is Hashtable and hashing same?
+you can write a hash function and what it does is to hash keys to bins. In other words the hash function is doing the 
+hashing. HashTable is a data Structure in which a given value is mapped with a particular key for faster access of elements. 
+-> Process of populating this data structure is known as hashing.
+
+==>**A hash function takes some input data (typically a bunch of binary bytes, but could be anything - whatever you make it to) 
+and calculates a hash value, which is typically an integer number (but, again, can be anything).
+The process of doing this is called hashing.
+==>**HashTable is a data Structure in which a given value is mapped with a particular key for faster access of elements. - Process of populating this data structure is known as hashing.
+To do hashing , you need a function which will provide logic for mapping values to keys. This function is hash function
+
+==>**you can write a hash function and what it does is to hash keys to bins.
+In other words the hash function is doing the hashing.
+
+**The main advantages are:
+The hash value is always the same size
+The same input will always generate the same output.
+If it's a good hash function, different inputs will usually generate different outputs, but it's still possible that two different inputs generate the same output (this is called a hash collision).
+
+
+
+
+
+**HashMap and Hashtable both are used to store data in key and value form.
+        Both are using hashing technique to store unique keys.
+
+------------**********differem=nce bet hashMap and HashTable***********--------------
+1) HashMap is non synchronized. It is not-thread safe and can't be shared between many threads without proper synchronization code. ==>	Hashtable is synchronized. It is thread-safe and can be shared with many threads.
+2) HashMap allows one null key and multiple null values. ==>	Hashtable doesn't allow any null key or value.
+3) HashMap is a new class introduced in JDK 1.2. ==>	Hashtable is a legacy class.
+4) HashMap is fast. ==>	Hashtable is slow.
+5) We can make the HashMap as synchronized by calling this code
+Map m = Collections.synchronizedMap(hashMap); ==>	Hashtable is internally synchronized and can't be unsynchronized.
+6) HashMap is traversed by Iterator. ==>	Hashtable is traversed by Enumerator and Iterator.
+7) Iterator in HashMap is fail-fast. ==>	Enumerator in Hashtable is not fail-fast.
+8) HashMap inherits AbstractMap class. ==>	Hashtable inherits Dictionary class.
+
+
+-----------------------------------------------------
+****Unordered Sets in C++ Standard Template Library***
+$$$$$$$$$$$$$$$$$$$$$$$--UNORDERED_SET IS NOTHING BUT A HASHING--$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+https://www.cplusplus.com/reference/unordered_set/unordered_set/
+
+class template
+<unordered_set>
+std::unordered_set
+template < class Key,                        // unordered_set::key_type/value_type
+           class Hash = hash<Key>,           // unordered_set::hasher
+           class Pred = equal_to<Key>,       // unordered_set::key_equal
+           class Alloc = allocator<Key>      // unordered_set::allocator_type
+           > class unordered_set;
+
+
+==>An unordered_set is implemented using a hash table where keys are hashed into indices of a hash table so that the insertion is always
+randomized. All operations on the unordered_set takes constant time O(1) on an average which can go up to linear time O(n) 
+in worst case which depends on the internally used hash function, but practically they perform very well and generally provide
+a constant time lookup operation. 
+
+-->>>***==>so We can use Unordered_set for to use [hashing] techinque
+
+
+**==>Sets vs Unordered Sets 
+Set is an ordered sequence of unique keys whereas unordered_set is a set in which key can be stored in any order, so unordered.
+Set is implemented as a balanced tree structure that is why it is possible to maintain order between the elements
+(by specific tree traversal). The time complexity of set operations is O(log n) while for unordered_set, it is O(1).
+
+
+**==>Difference : 
+
+                  | map             | unordered_map
+---------------------------------------------------------
+Ordering        | increasing  order   | no ordering
+                | (by default)        |
+
+Implementation  | Self balancing BST  | Hash Table
+                | like Red-Black Tree |  
+
+search time     | log(n)              | O(1) -> Average 
+                |                     | O(n) -> Worst Case
+
+Insertion time  | log(n) + Rebalance  | Same as search
+                      
+Deletion time   | log(n) + Rebalance  | Same as search
+
+
+*-->Use std::map when 
+You need ordered data.
+You would have to print/access the data (in sorted order).
+You need predecessor/successor of elements.
+See advantages of BST over Hash Table for more cases.
+
+
+*-->Use std::unordered_map when 
+You need to keep count of some data (Example – strings) and no ordering is required.
+You need single element access i.e. no traversal.
+
+

@@ -1,0 +1,13 @@
+==>By default, are left uninitialized. This means that none of its elements are set to anyparticular value; 
+their contents are undetermined at the point the array is declared.
+
+The initializer can even have no values, just the braces:
+int baz [5] = { };
+
+
+==>Finally, the evolution of C++ has led to the adoption of universal initialization also for arrays. 
+Therefore, there is no longer need for the equal sign between the declaration and the initializer.
+ Both these statements are equivalent:
+
+int foo[] = { 10, 20, 30 };
+int foo[] { 10, 20, 30 }; 

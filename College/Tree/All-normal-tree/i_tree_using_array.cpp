@@ -41,15 +41,24 @@ void tree_traversal(int *arr)
     }
     cout << "\n";
 }
+
+//               500
+//            /      \
+//          80         70
+//        /    \     /    \
+//      33     540  88     0 
+//     /  \    /  \
+//    0   40  66   0
+
 int main()
 {
     set_root(500);
     set_left_tree(80, 0);
     set_right_tree(70, 0);
     set_left_tree(33,1);
-    set_right_tree(500040, 1);
-    set_right_tree(40, 3);
+    set_right_tree(540, 1);
     set_left_tree(88,2);
+    set_right_tree(40, 3);
     set_left_tree(66,4);
     set_left_tree(235,6);
     set_right_tree(940, 7);
